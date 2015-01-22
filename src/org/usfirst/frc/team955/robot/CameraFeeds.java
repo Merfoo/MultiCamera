@@ -57,9 +57,6 @@ public class CameraFeeds
 	 */
 	public void changeCam(int newId)
     {
-		if(curCam == newId) 
-			return;
-    	
 		NIVision.IMAQdxStopAcquisition(curCam);
     	NIVision.IMAQdxConfigureGrab(newId);
     	NIVision.IMAQdxStartAcquisition(newId);
