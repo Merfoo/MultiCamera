@@ -16,8 +16,8 @@ public class CameraFeeds
 	public CameraFeeds(Controller newContr)
 	{
         // Get camera ids by supplying camera name ex 'cam0', found on roborio web interface
-        camCenter = NIVision.IMAQdxOpenCamera("cam0", NIVision.IMAQdxCameraControlMode.CameraControlModeController);
-        camRight = NIVision.IMAQdxOpenCamera("cam1", NIVision.IMAQdxCameraControlMode.CameraControlModeController);
+        camCenter = NIVision.IMAQdxOpenCamera(Config.CameraFeeds.camNameCenter, NIVision.IMAQdxCameraControlMode.CameraControlModeController);
+        camRight = NIVision.IMAQdxOpenCamera(Config.CameraFeeds.camNameRight, NIVision.IMAQdxCameraControlMode.CameraControlModeController);
         curCam = camCenter;
         // Img that will contain camera img
         frame = NIVision.imaqCreateImage(NIVision.ImageType.IMAGE_RGB, 0);
